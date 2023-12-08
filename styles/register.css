@@ -1,0 +1,158 @@
+html{
+    background: var(--gris-c, #F4F5FC);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100%;
+    display: flex;
+    padding: 60px 35px 40px 35px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    /* p - karlaregular */
+    font-family: 'Karla';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* CSS logo */
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon{
+    width: 42.336px;
+    height: 40.513px;
+}
+
+.content{
+    color: #333131;
+    font-family: 'Bebas Neue';
+    font-size: 28px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.12px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    flex-shrink: 0;
+    align-self: stretch;
+}
+
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-shrink: 0;
+    align-self: stretch;
+}
+
+.inputs input{
+    display: flex;
+    height: 40px;
+    align-items: center;
+    align-self: stretch;
+    padding-left: 20px;
+    border-radius: 15px;
+    background: var(--blanc, #FFF);
+    /* shadow soft */
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+
+    font-size: 13px;
+    color: var(--gris, #D9D9D9);
+}
+input{
+    border-style: none;
+}
+.gender{
+    display: flex;
+    padding-right: 31px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    align-self: stretch;
+    gap: 10px;
+    flex-shrink: 0;
+
+    font-size: 13px;
+    color: var(--primaire-clair, #185EB4);
+
+}
+.genre{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.choice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.radio-box{
+    width: 24px;
+    height: 24px;
+
+    fill: var(--White, #FFF);
+    stroke-width: 1px;
+    stroke: var(--primaire, #144B90);
+}
+
+label{
+    color: var(--primaire, #144B90);
+    font-size: 13px;
+}
+#inscription{
+    display: flex;
+    padding: 14px 44px 13px 43px;
+    justify-content: center;
+    align-items: center;
+
+    text-transform: uppercase;
+
+    border-radius: 25px;
+    background: var(--primaire, #144B90);
+
+    color: #FFF;
+    /* h3 - karlamedium */
+    font-family: 'Karla';
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+.connexion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--noir, #333131);
+    font-family: 'Karla';
+    font-size: 14px;
+    font-weight: 400;
+
+}
+
+.connexion a{
+    color: var(--noir, #333131);
+}
