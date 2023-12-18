@@ -11,7 +11,7 @@
       $password = filter_input(INPUT_POST, "password");
       $_SESSION["email"]=$login;
     
-      $requete = $conn->prepare("SELECT * FROM profil WHERE email = :login");
+      $requete = $pdo->prepare("SELECT * FROM profil WHERE email = :login");
       $requete->execute([":login" => $login]);
     
       $user = $requete->fetch(PDO::FETCH_ASSOC);
@@ -30,7 +30,7 @@
         $token = uniqid('', true);
         $_SESSION['token']=$token;
     
-        $requete1 = $conn->prepare("UPDATE profil SET token = :token WHERE email = :login");
+        $requete1 = $pdo->prepare("UPDATE profil SET token = :token WHERE email = :login");
         $requete1->execute([":token" => $token, ":login" => $login]);
         if($user['role'] == "public"){
           header('Location: accueil.php');
@@ -46,20 +46,16 @@
     ?>
 
 <!DOCTYPE html>
-<html>
-    <head>
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="./styles/login.css" rel="stylesheet" />
         <link rel="preconnect" href="https://fonts.cdnfonts.com/css/bebas-neue" rel="stylesheet">
         <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet'>
         <title>Connexion</title>
     </head>
-
-    <header>
-    </header>
 
     <body>
       <div class="logo-form">

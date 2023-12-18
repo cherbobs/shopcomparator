@@ -11,7 +11,7 @@ body{
     margin: 0px;
     padding: 0px 35px 40px 35px;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
     /* p - karlaregular */
@@ -124,7 +124,7 @@ input{
     }
 
 
-    .inscription{
+.inscription{
   
     display: flex;
     justify-content: center;
@@ -138,8 +138,8 @@ input{
     font-weight: 400;
     line-height: normal;
 
-    }
+}
 
-    .inscription a{
-        color: var(--noir, #333131);
-    }
+.inscription a{
+    color: var(--noir, #333131);
+}

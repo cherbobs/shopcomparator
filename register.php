@@ -21,7 +21,7 @@ if($methode == "POST")
 
         if($password == $confirm_password){
             
-            $requete = $conn->prepare("INSERT INTO profil (username, email, password, first_name, name, num_tel, adresse) VALUES(:username, :email, :password, :first_name, :name, :num_tel, :adresse)");
+            $requete = $pdo->prepare("INSERT INTO profil (username, email, password, first_name, name, num_tel, adresse) VALUES(:username, :email, :password, :first_name, :name, :num_tel, :adresse)");
             $requete->execute([
                 ":name" => $name,
                 ":first_name" => $first_name,
@@ -41,7 +41,7 @@ if($methode == "POST")
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -106,7 +106,7 @@ if($methode == "POST")
 
     </form>
 
-    <div class="connexion">Vous avez déjà un compte? <a href="login.php">Connectez-vous</a></div>
+    <div class="connexion">Vous avez déjà un compte? &nbsp<a href="login.php">Connectez-vous</a></div>
 
 </body>
 </html>
