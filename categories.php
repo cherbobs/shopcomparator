@@ -2,17 +2,11 @@
 include("config.php");
 
 
-@$keywords = $_GET["keywords"];
-@$valider = $_GET["valider"];
-
-if (isset($valider) && !empty(trim($keywords))){
-    $requete = $pdo->prepare("SELECT * FROM product WHERE name like '%$keywords%'");
+    $requete = $pdo->prepare("SELECT * FROM category ORDER BY id");
     $requete->setFetchMode(PDO::FETCH_ASSOC);
     $requete->execute();
+    $categories=$requete->fetchAll();
 
-    @$liste=$requete->fetchAll();
-    $afficher = "oui";
-}
 
 ?>
 
@@ -26,22 +20,30 @@ if (isset($valider) && !empty(trim($keywords))){
     <title>Rechercher</title>
 </head>
 <body>
-    <form name="searchbar" action="" method="get">
-        <input type="text" name="keywords" id="" placeholder="Rechercher">
-        <input type="submit" value="Rechercher" name="valider">
-    </form>
-    <?php if (@$afficher == "oui"){ ?>
-        <div id="resultats">
-            <?php foreach (@$liste as $resultat) { ?>
-                <div class="resultat" id="<?= $resultat['id']?>" onclick="location.href='produit.html?id=<?= $resultat['id'] ?>'">
+    <div class="liste-categories">
+        <div class="recherche-retour">
+            <div class="arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+            <path d="M25 7L13 19L25 31" stroke="#144B90" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            </div>
+            <form name="searchbar" action="" method="get">
+            <input type="text" name="keywords" id="" placeholder="Rechercher">
+            <input type="submit" value="Rechercher" name="valider">
+            </form>
+        </div>
+    
+        
+        <div id="categories">
+            <?php foreach ($categories as $category) { ?>
+                <div class="category" id="<?= $category['id']?>" onclick="location.href='display_searchcategory.php?id=<?= $category['id'] ?>'">
                     <div class="photo-produit">
-                        <img src="<?= $resultat['image']?>" />
+                        <img src="./sprites/categories/<?= $category['image']?>.png" />
                     </div>
 
                     <div class="description-container">
                         <div class="description-produit">
-                            <h4><?= $resultat['name']?></h4>
-                            <p>14 magasins</p>  
+                            <h4><?= $category['name']?></h4> 
                         </div>
                     </div>
 
@@ -54,6 +56,7 @@ if (isset($valider) && !empty(trim($keywords))){
                 </div>
             <?php } ?>
         </div>
-    <?php } ?>
+    </div>
+
 </body>
 </html>
