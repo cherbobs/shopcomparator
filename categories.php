@@ -36,7 +36,7 @@ include("config.php");
         
         <div id="categories">
             <?php foreach ($categories as $category) { ?>
-                <div class="category" id="<?= $category['id']?>" onclick="location.href='display_searchcategory.php?id=<?= $category['id'] ?>'">
+                <div class="category" id="<?= $category['id']?>" onclick="location.href='display_searchlist.php?id=<?= $category['id'] ?>'">
                     <div class="photo-produit">
                         <img src="./sprites/categories/<?= $category['image']?>.png" />
                     </div>
