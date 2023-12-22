@@ -22,7 +22,6 @@ if (isset($id_category)){
     $requete->execute([
         ":category_id" => $id_category
     ]);
-
     @$liste=$requete->fetchAll();
     $afficher = True;
     @$cat =True;
@@ -59,22 +58,11 @@ if (isset($id_category)){
             </form>
         </div>
 
-    <?php if (@$cat){ ?>
-        <div id="categories">
-            <div class="liste-categories">
-                <?php foreach (@$categories as $category) { ?>
-                    <div class="cat">
-                        <h2><?= $category['name'] ?></h2>
-                    </div>
-                <?php } ?> 
-            </div>
-        </div> 
-    <?php } ?>  
 
     <?php if (@$afficher){ ?>
         <div id="resultats">
             <?php foreach (@$liste as $resultat) { ?>
-                <div class="resultat" id="<?= $resultat['id']?>" onclick="location.href='produit.html?id=<?= $resultat['id'] ?>'">
+                <div class="resultat" id="<?= $resultat['id']?>" onclick="location.href='produit.php?id=<?= $resultat['id'] ?>'">
                     <div class="photo-produit">
                         <img src="<?= $resultat['image']?>" />
                     </div>
