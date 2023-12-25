@@ -5,7 +5,6 @@ include("config.php");
 
 
 if (isset($id_produit)){
-    var_dump($id_produit);
     $requete = $pdo->prepare("SELECT * FROM product WHERE id = :id_product");
     $requete->execute([
         ":id_product" => $id_produit

@@ -1,0 +1,87 @@
+
+body{
+    top:56px;
+    left: 0px;
+    margin: 0;
+}
+
+/* CSS header */
+header{
+    left: 0px;
+    top: 0px;
+    display: flex;
+    height: 34px;
+    padding: 11px 20px;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--primaire, #144B90);
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 9.83px;
+}
+
+.icon{
+    width: 27.17px;
+    height: 26px;
+}
+
+.content{
+    color: var(--dore, #FEFDF8);
+    font-family: 'Bebas Neue';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.8px;
+}
+
+/* CSS recherche-retour */
+.recherche-retour{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: 20px 14px;
+    flex: 1 0 0;
+    flex-wrap: wrap;
+    }
+
+.arrow{
+    width: 38px;
+    height: 38px;
+}
+
+form{
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 17px 5px;
+    flex-wrap: wrap;
+}
+
+.searchbar{
+    display: flex;
+    width: 289px;
+    padding: 6px 15px 6px 10px;
+    justify-content: space-between;
+    align-items: center;
+    border-style: none;
+
+    border-radius: 20px;
+    background: var(--blanc, #FFF);
+    
+    /* shadow medium */
+    box-shadow: 0px 8px 30px 8px rgba(0, 0, 0, 0.10);
+
+}
+
+.submit{
+    width: 0px;
+    height: 0px;
+    padding: 0px;
+    border: 0px;
+}
