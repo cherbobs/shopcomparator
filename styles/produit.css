@@ -1,0 +1,255 @@
+*{
+    margin: 0px;
+}
+body{
+    top:56px;
+    left: 0px;
+    margin: 0;
+
+    background: var(--gris-c, #F4F5FC);
+}
+
+/* header */
+header{
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    display: flex;
+    height: 34px;
+    padding: 11px 20px;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--primaire, #144B90);
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 9.83px;
+}
+
+.icon{
+    width: 27.17px;
+    height: 26px;
+}
+
+.content{
+    color: var(--dore, #FEFDF8);
+    font-family: 'Bebas Neue';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.8px;
+}
+
+/* Fiche produit */
+.fiche{
+    width: 100%;
+    display: flex;
+    padding: 30px 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    background: var(--gris-c, #F4F5FC);
+}
+
+/* Flèche retour */
+.arrow-back{
+    display: flex;
+    height: 40px;
+    padding: 1px 312px 1px 0px;
+    align-items: center;
+    align-self: stretch;
+}
+
+.arrow{
+    width: 38px;
+    height: 38px;
+}
+
+
+/* Titre-nutriscore*/
+.titre-nutriscore{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+h1{
+    align-self: stretch;
+    
+    color: #000;
+
+    /* h2 - karlabold */
+    font-family: 'Karla';
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.56px;
+    }
+
+
+
+/* Photo-produit */
+
+.photo-produit{
+    display: flex;
+    width: 250px;
+    height: 250px;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 15px;
+    background: var(--blanc, #FFF);
+
+    /* shadow soft */
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+}
+
+.photo-container{
+    display: flex;
+    width: 220px;
+    height: 220px;
+    padding: 0px 68.5px 0px 69px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+img{
+    max-width: 220px;
+    max-height: 220px;
+    flex-shrink: 0;
+}
+
+
+
+/* Description */
+.description{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+}
+
+/* Ingrédients et allergènes */
+.ingredients-allergenes{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+}
+h3{
+    align-self: stretch;
+
+    color: #000;
+
+    /* h3 - karlamedium */
+    font-family: 'Karla';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+p{
+    align-self: stretch;
+
+    color: #000;
+
+    /* p - karlaregular */
+    font-family: 'Karla';
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+/* Listes stores */
+.liste-stores{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    align-self: stretch;
+}
+
+#store{
+    display: flex;
+    padding: 20px 10px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 9px;
+    align-self: stretch;
+    flex-wrap: wrap;
+
+    border-radius: 15px;
+    background: var(--blanc, #FFF);
+    
+    /* shadow medium */
+    box-shadow: 0px 8px 30px 8px rgba(0, 0, 0, 0.10);  
+}
+
+.logo{
+    display: flex;
+    width: 52px;
+    height: 52px;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    max-width: 52px;
+    max-height: 52px;
+}
+
+.name-store{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    flex: 1 0 0;
+}
+
+h5{
+    align-self: stretch;
+
+    color: #000;
+
+    font-family: 'Karla';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+.price{
+    display: flex;
+    height: 72px;
+    padding: 25px 0px 24px 33px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+h2{
+    color: #000;
+    text-align: right;
+
+    font-family: 'Karla';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
