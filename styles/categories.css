@@ -44,14 +44,15 @@ header{
 }
 
 
-.search-keywords-results{
+.search-categories{
     display: flex;
-    width: 100%;
-    padding: 30px 20px;
-    flex-direction: column;
+    padding: 40px 20px 75px 20px;
+    justify-content: center;
     align-items: flex-start;
+    align-content: flex-start;
     gap: 20px;
-
+    flex: 1 0 0;
+    flex-wrap: wrap; 
 }
 
 /* CSS recherche-retour */
@@ -107,136 +108,92 @@ form{
     border: 0px;
 }
 
+/* Categories */
 
-
-/* Keywords */
-.keywords{
-    display: flex;
-    height: 55px;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    align-self: stretch; 
-}
-
-.liste-keywords{
-    display: flex;
-    padding: 10px 40px 10px 0px;
-    align-items: flex-start;
-    gap: 20px;
-}
-
-.keyword{
-    display: flex;
-    padding: 8px 10px 8px 20px;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-
-    border-radius: 20px;
-    background: var(--blanc, #FFF);
-    
-    /* shadow soft */
-    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
-}
-
-h2{
-    margin: 0px;
-    color: #000;
-
-    font-family: 'Karla';
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
-
-.icon-annuler{
-    width: 12px;
-    height: 12px;
-}
-
-
-/* liste-resultats */
-
-#resultats{
+#categories{
     display: flex;
     align-items: flex-start;
     align-content: flex-start;
     gap: 20px;
-    align-self: stretch;
+    flex: 1 0 0;
     flex-wrap: wrap;
 }
 
-.resultat{
+.category{
     display: flex;
-    width: 155px;
-    height: 234px;
-    padding: 20px;
+    width: 165px;
+    height: 219px;
+    padding: 10px 0px;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     gap: 10px;
-    
+
     border-radius: 15px;
     background: var(--blanc, #FFF);
     
     /* shadow medium */
     box-shadow: 0px 8px 30px 8px rgba(0, 0, 0, 0.10);
 }
+
 .photo-produit{
     display: flex;
-    height: 115px;
-    padding: 5px 42.625px 5px 43px;
+    padding: 5px 23px;
     justify-content: center;
     align-items: center;
-    flex-shrink: 0;
-    align-self: stretch;
+    gap: 10px;
 }
 
-img{
-    max-width: 115px;
-    max-height: 105px;
-    flex-shrink: 0;
+.photo-produit img{
+    max-width: 85px;
+    max-height: 85px;
     justify-content: center;
     align-items: center;
 }
 
 .description-container{
     display: flex;
-    flex-direction: column;
+    height: 56px;
+    padding: 0px 20px;
     justify-content: center;
-    align-items: flex-start;
-    flex: 1 0 0;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
     align-self: stretch;
 }
 
-h4{
-    align-self: stretch;
-    margin:0px;
+.description-produit{
+    width: 125px;
+    justify-content: center;
+    align-items: center;
+}
 
+.description-produit h4{
     color: #000;
+    text-align: center;
+
+    /* h3 - karlamedium */
     font-family: 'Karla';
-    font-size: 16px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
 }
 
-p{
+.voir-plus{
+    display: flex;
+    height: 39px;
+    padding: 0px 20px 15px 121px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 10px;
+    flex-shrink: 0;
     align-self: stretch;
-    margin:0px;
-
-    color: #000;
-    font-family: 'Karla';
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
 }
 
 .right-arrow{
     width: 24px;
     height: 24px;
+    flex-shrink: 0;
 
     fill: var(--primaire, #144B90);
 }
