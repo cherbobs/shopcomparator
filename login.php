@@ -17,7 +17,7 @@
       $user = $requete->fetch(PDO::FETCH_ASSOC);
       var_dump($user);
       var_dump($_SESSION);
-      $_SESSION["id_user"]=$user['id_user'];
+      $_SESSION["user_id"]=$user['user_id'];
       $_SESSION["username"]=$user['username'];
     
     var_dump(password_hash($password, PASSWORD_DEFAULT));
@@ -32,11 +32,8 @@
     
         $requete1 = $pdo->prepare("UPDATE profil SET token = :token WHERE email = :login");
         $requete1->execute([":token" => $token, ":login" => $login]);
-        if($user['role'] == "public"){
-          header('Location: accueil.php');
-        }else{
-          header('Location: ../../interne/SCRIPT/accueil_interne.html');
-        }
+
+        header('Location: categories.php');
 
       } else {
         $error = "Identifiants invalides";

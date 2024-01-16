@@ -76,7 +76,7 @@ form{
     box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
 
     font-size: 13px;
-    color: var(--gris, #D9D9D9);
+    color: black;
 }
 input{
     border-style: none;

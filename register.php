@@ -14,22 +14,20 @@ if($methode == "POST")
         $username = filter_input(INPUT_POST, "username");
         $email = filter_input(INPUT_POST, "email");
         $password = filter_input(INPUT_POST, "password");
-        $adresse = filter_input(INPUT_POST, "adresse");
-        var_dump($adresse);
-        $num_tel = filter_input(INPUT_POST, "num_tel");
+        $gender = filter_input(INPUT_POST, "gender");
         $confirm_password = filter_input(INPUT_POST, "confirm_password");
 
         if($password == $confirm_password){
             
-            $requete = $pdo->prepare("INSERT INTO profil (username, email, password, first_name, name, num_tel, adresse) VALUES(:username, :email, :password, :first_name, :name, :num_tel, :adresse)");
+            $requete = $pdo->prepare("INSERT INTO profil ( firstname, name, username, email, gender, password ) VALUES(:first_name, :name, :username, :email, :gender, :password )");
             $requete->execute([
-                ":name" => $name,
                 ":first_name" => $first_name,
+                ":name" => $name,
                 ":username" => $username,
                 ":email" => $email,
-                ":password" => password_hash($password, PASSWORD_DEFAULT),
-                ":num_tel" => $num_tel,
-                ":adresse" => $adresse
+                ":gender" => $gender,
+                ":password" => password_hash($password, PASSWORD_DEFAULT)
+
             ]); 
 
             header("Location: login.php");
@@ -68,7 +66,7 @@ if($methode == "POST")
 
     <form class="form" action="" method="POST">
         <div class="inputs">
-            <input type="text" class="box-input" name="firstname" value="" placeholder="Prénom" required>           
+            <input type="text" class="box-input" name="first_name" value="" placeholder="Prénom" required>           
 
             <input type="text" class="box-input" name="name" value="" placeholder="Nom" required>
 
